@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  width: 100vw;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.main {
+}
+
+.hero {
+  width: 100vw;
+  height: 370px;
+  position: relative;
+  background: url("./bg.jpg") no-repeat center center;
+  background-size: cover;
+  margin: 0 auto; /* Center the hero section */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity to make the background darker */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2; /* Ensure content is above the overlay */
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+
+#profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  margin: 10px 0 5px;
+  font-size: 1.8rem;
+}
+
+.content p {
+  margin: 5px 0;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+.socials i {
+  font-size: 2rem;
+  margin: 0 5px;
+}
+
+/* Adjust button and anchor styles */
+button,
+#join-button {
+  background-color: #ff5252; /* Dark grey background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+button:hover,
+#join-button:hover {
+  background-color: #333; /* Red background on hover */
+  color: #ff5252;
+}
+
+#tiers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 50px;
+}
+
+.tier {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.tier .money {
+  font-size: 30px;
+  font-weight: 900;
+}
+.tier .month {
+  font-weight: normal;
+  font-size: 20px;
+  color: #5a5a5a;
+}
+.tier ul {
+  text-align: left;
+  margin-left: 55px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tier ul li {
+  margin: 10px auto;
+  font-size: 15px;
+}
+.special {
+  position: relative;
+  border: 2px solid #ff6b6b;
+  padding-bottom: 30px;
+}
+.special a {
+  position: absolute;
+  margin-left: 5px;
+  bottom: 10px;
+  background-color: #fff;
+  color: #ff6b6b;
+  border: 3px solid #ff6b6b;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.special a:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.best {
+  position: absolute;
+  top: -20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  left: 113px;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 2px 10px;
+  text-align: center;
+}
+
+.tier:hover {
+  transform: translateY(-10px);
+}
+
+.tier h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tier p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem; /* Adjusted margin between paragraph and list */
+}
+
+/* Adjust list styles */
+ul {
+  padding-left: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default bullet points */
+}
+
+ul li {
+  margin-bottom: 0.5rem; /* Adjust margin bottom for list items */
+}
+
+footer {
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
